@@ -225,6 +225,27 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        let VypujckaItemCollection = document.getElementsByClassName("vypujcka-item")
+        for (let InputElement of VypujckaItemCollection)
+        {
+            InputElement.getElementsByTagName("input")[0].onclick = (e) => {
+                console.log("ahoj");
+                let InputElementChecked = InputElement.getElementsByClassName("detail-vypujcky-container")[0]
+                InputElementChecked.classList.toggle("detail-vypujcky-container-checked")
+                
+            if (InputElementChecked.classList.contains("detail-vypujcky-container-checked"))
+                {
+                    InputElementChecked.style.height = InputElementChecked.scrollHeight + "px"
+                }
+            else
+                {
+                    InputElementChecked.style.height = "0px"
+                }
+            }            
+        }
+    </script>
 </body>
 
 </html>
